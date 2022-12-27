@@ -4,10 +4,6 @@
   "version": "5.15.0",
   "description": "Front-end test for YouLead selection process",
   "homepage": "https://github.com/cfviotti/youlead-test",
-  "browserslist": [
-    "last 2 versions",
-    "> 5%"
-  ],
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.0",

@@ -53,7 +53,7 @@ module.exports = {
           },
         },
         generator: {
-          filename: 'images/[name].[hash:6][ext]'
+          filename: 'images/[name].[hash:6][ext]',
         },
       },
     ],
