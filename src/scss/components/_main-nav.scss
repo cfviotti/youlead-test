@@ -11,4 +11,26 @@
     font-size: 2.5rem;
     margin-right: auto;
   }
+
+  > ul {
+    display: flex;
+    gap: $s-4;
+
+    > li {
+      list-style-type: none;
+      display: inline-flex;
+      align-items: center;
+      gap: $s-2;
+      line-height: 1.2;
+
+      &:not(.-no-icon)::before {
+        content: '';
+        display: block;
+        width: 1em;
+        height: 1em;
+        mask-image: var(--icon-url);
+        background-color: $color-secondary;
+      }
+    }
+  }
 }
