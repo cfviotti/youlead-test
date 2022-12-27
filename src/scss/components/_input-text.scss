@@ -5,7 +5,7 @@
 
   label {
     position: absolute;
-    padding-inline: $s-half;
+    padding-inline: $s-1-half;
     color: hsl(0, 0%, 70%);
     pointer-events: none;
     transform-origin: 0 100%;
@@ -15,6 +15,8 @@
   input {
     padding: $s-1;
     border: solid 2px hsl(0, 0%, 90%);
+    min-width: 0;
+    width: 100%;
     appearance: none;
 
     &:not(:placeholder-shown) {

@@ -1,0 +1,23 @@
+.home-page {
+  > .hero {
+    > .form {
+      display: flex;
+      flex-direction: column;
+      max-width: 360px;
+      gap: $s-1-half;
+      padding: $s-4;
+      box-shadow: 0px 16px 56px 8px hsl(0deg 0% 0% / 10%);
+      border-top: 4px solid $color-success;
+
+      > h2 {
+        font-weight: 400;
+        text-align: center;
+      }
+
+      > .name {
+        display: flex;
+        gap: inherit;
+      }
+    }
+  }
+}
