@@ -1,7 +1,10 @@
 .home-page {
   > section {
+    $padding-block: $s-8;
+
     @include contain-width;
-    padding-block: $s-8;
+    padding-top: calc(#{$padding-block} + #{$height-nav});
+    padding-bottom: $padding-block;
   }
 
   > .hero {

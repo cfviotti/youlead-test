@@ -1,4 +1,4 @@
 // max-width based on padding to permit a background to extend outside the container edges
-@mixin contain-width($max-width: $app-container-width, $min-padding: $s-5) {
-  padding-inline: max(calc((100% - #{$max-width}) / 2), #{$min-padding});
+@mixin contain-width ($max-width: $width-app-container, $min-padding: min(#{$s-5}, 4vw + #{$s-1})) {
+  padding-inline: max(calc((100% - #{$max-width}) / 2), min(#{$min-padding}));
 }
