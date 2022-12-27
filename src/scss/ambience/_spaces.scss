@@ -1,0 +1,13 @@
+$space-base: calc(1rem / 2);
+
+$s-1: $space-base * 1;
+$s-2: $space-base * 2;
+$s-3: $space-base * 3;
+$s-4: $space-base * 4;
+$s-5: $space-base * 5;
+$s-6: $space-base * 6;
+$s-7: $space-base * 7;
+$s-8: $space-base * 8;
+
+$s-half: calc(#{$s-1} / 2);
+$s-1-half: calc(#{$s-1} + #{$s-half});
