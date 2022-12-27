@@ -1,0 +1,6 @@
+$max-containing-width: 1400px;
+
+body {
+  // max-width based on padding to permit a background to extend outside the container edges
+  padding-inline: calc((100% - #{$max-containing-width}) / 2);
+}
