@@ -15,7 +15,9 @@
   gap: $s-4;
 
   .items:focus-within  {
-    @include has-items-opened;
+    @media (max-width: $bp-tablet) {
+      @include has-items-opened;
+    }
   }
 
   > .logo {
