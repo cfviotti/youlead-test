@@ -1,4 +1,10 @@
 .main-nav {
+  @mixin has-items-opened {
+    transform: translateY(0);
+    transition: transform 200ms ease-in-out;
+    box-shadow: 0px 6px 8px 0px hsl(0 0% 0% / 15%);
+  }
+
   @include contain-width;
   display: flex;
   align-items: center;
@@ -7,6 +13,10 @@
   margin-bottom: -$height-nav;
   color: hsl(0, 0%, 100%);
   gap: $s-4;
+
+  .items:focus-within  {
+    @include has-items-opened;
+  }
 
   > .logo {
     font-size: 2.5rem;
@@ -69,9 +79,7 @@
         }
 
         & ~ .items {
-          transform: translateY(0);
-          transition: transform 200ms ease-in-out;
-          box-shadow: 0px 6px 8px 0px hsl(0 0% 0% / 15%);
+          @include has-items-opened;
         }
       }
     }
