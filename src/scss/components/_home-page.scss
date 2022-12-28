@@ -26,7 +26,7 @@
       }
 
       > .main {
-        margin-top: $s-6;
+        margin-top: 1.5em; // Dynamic margin to match font-size
         line-height: 1.5;
         font-size: clamp(1rem, 2.5vw + 0.5rem, 1.5rem);
         font-weight: 600;
@@ -35,7 +35,7 @@
       }
 
       > .secondary {
-        margin-top: $s-5;
+        margin-top: 2.5em; // Dynamic margin to match font-size
         font-size: clamp(0.75rem, 1.5vw + 0.25rem, 1rem);
         font-weight: 400;
         max-width: 580px;
