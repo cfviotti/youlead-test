@@ -6,6 +6,7 @@
   height: $height-nav;
   margin-bottom: -$height-nav;
   color: hsl(0, 0%, 100%);
+  gap: $s-4;
 
   > .logo {
     font-size: 2.5rem;
@@ -14,7 +15,8 @@
 
   > ul {
     display: flex;
-    gap: $s-4;
+    gap: inherit;
+    padding: unset;
 
     > li {
       list-style-type: none;
@@ -23,7 +25,7 @@
       gap: $s-2;
       line-height: 1.2;
 
-      &:not(.-no-icon)::before {
+      &::before {
         content: '';
         display: block;
         width: 1em;
@@ -31,6 +33,12 @@
         mask-image: var(--icon-url);
         background-color: $color-secondary;
       }
+    }
+  }
+
+  .hamburger-menu {
+    @media (min-width: $bp-tablet) {
+      display: none;
     }
   }
 }

@@ -1,0 +1,44 @@
+.hamburger-menu:where(input[type="checkbox"]) {
+  --shadow-color: hsl(0, 0%, 100%);
+  --shadow-translate-y: #{$s-1};
+  --transition-timing: 100ms;
+
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  appearance: none;
+
+  &::before, &::after {
+    content: '';
+    grid-row-start: 1;
+    grid-column-end: 1;
+    height: 2px;
+    width: 24px;
+    display: block;
+    background: hsl(0, 0%, 100%);
+    transition: transform var(--transition-timing),
+                box-shadow var(--transition-timing);
+    transition-delay: 0ms,
+                      var(--transition-timing);
+    transition-timing-function: ease-out;
+  }
+
+  &::before {
+    box-shadow: #{0 var(--shadow-translate-y) 0 0px var(--shadow-color)},
+                #{0 calc(-1 * var(--shadow-translate-y)) 0 0px var(--shadow-color)};
+  }
+
+  &:checked, &:focus-visible {
+    --shadow-color: transparent;
+    --shadow-translate-y: 0;
+
+    &::before, &::after {
+      transition-delay: var(--transition-timing),
+                        0ms;
+    }
+
+    &::before { transform: rotate(45deg) }
+    &::after { transform: rotate(-45deg) }
+  }
+}
