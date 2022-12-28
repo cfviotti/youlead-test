@@ -8,13 +8,11 @@
   }
 
   > .hero {
-    $background-wave: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAwIiBoZWlnaHQ9IjE2NyIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTg3OSAwYzIxNS04IDM2NyAxMTggNjIxIDE1MXYxNkgwQzU3OSAxNDAgNTkwIDggODc5IDBaIi8+PC9zdmc+");
-
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: $s-6;
-    background: $background-wave no-repeat bottom/100% min(10vw, 100px), // Full-width positioned at bottom with a max height of 10vw or 100px
+    background: url(../images/wave-background.svg) no-repeat bottom/100% min(10vw, 100px), // Full-width positioned at bottom with a max height of 10vw or 100px
                 linear-gradient(to top, $color-blue-midnight, $color-blue-maritime);
 
     > .description {
