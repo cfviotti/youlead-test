@@ -1,0 +1,55 @@
+.what-we-offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $s-8;
+
+  .what {
+    text-align: center;
+
+    h2 {
+      font-size: 2.25rem;
+      font-weight: 400;
+      color: $color-brand;
+    }
+    p  {
+      font-size: 1.5rem;
+      color: $color-text;
+      margin-top: $s-2
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    gap: $s-8;
+
+    .pro {
+      flex: 0.2 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: $color-brand;
+        margin-top: $s-5;
+      }
+
+      p {
+        font-size: 1.25rem;
+        color: $color-text;
+        margin-top: $s-2;
+      }
+    }
+  }
+
+  .app-button {
+    margin-bottom: $s-4;
+  }
+}
