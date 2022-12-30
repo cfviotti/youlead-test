@@ -15,7 +15,7 @@ ctaButton.addEventListener('click', () => {
   firstInput.focus()
 })
 
-form.addEventListener('blur', (e) => {
+form.addEventListener('focusout', (e) => {
   if (!e.currentTarget.contains(e.relatedTarget)) {
     form.classList.remove('-highlight')
   }
