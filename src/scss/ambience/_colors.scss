@@ -1,22 +1,24 @@
-// Root colors
-$color-black-midnight: #14082b;
+:root {
+  // App colors (Raw HSL, must use hsl() or hsla() function)
+  --color-black-midnight: 260, 70%, 10%;
 
-$color-blue-maritime: #203F80;
-$color-blue-midnight: #002167;
+  --color-blue-maritime: 220, 60%, 30%;
+  --color-blue-midnight: 220, 100%, 20%;
 
-$color-green-ice: #36D9CB;
+  --color-green-ice: 175, 70%, 50%;
 
-$color-red-heart: #D96262;
+  --color-red-heart: 0, 60%, 60%;
 
-$color-purple-widowmaker: #9DAFFF;
-$color-purple-genie: #666AFF;
+  --color-purple-widowmaker: 230, 100%, 80%;
+  --color-purple-genie: 240, 100%, 70%;
 
-// App colors
-$color-brand: $color-blue-midnight;
-$color-brand-light: $color-blue-maritime;
-$color-secondary: $color-purple-widowmaker;
+  // Context colors
+  --color-brand: var(--color-blue-midnight);
+  --color-brand-light: var(--color-blue-maritime);
+  --color-secondary: var(--color-purple-widowmaker);
 
-$color-text: $color-black-midnight;
-$color-action: $color-purple-genie;
-$color-success: $color-green-ice;
-$color-error: $color-red-heart;
+  --color-text: var(--color-black-midnight);
+  --color-action: var(--color-purple-genie);
+  --color-success: var(--color-green-ice);
+  --color-error: var(--color-red-heart);
+}

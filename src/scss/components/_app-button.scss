@@ -1,6 +1,6 @@
 .app-button {
-  --background-color: #{$color-action};
-  --color: hsl(0, 0%, 100%);
+  --background-color: hsl(var(--color-action));
+  --color-text: hsl(0, 0%, 100%);
   --border-color: transparent;
   --hover-overlay: hsla(0, 0%, 100%, 0.1);
 
@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
   background-color: var(--background-color);
-  color: var(--color);
+  color: var(--color-text);
   border: 2px solid var(--border-color);
   border-radius: 10em;
   font-weight: 600;
@@ -30,9 +30,8 @@
 
   &.-outlined {
     --background-color: transparent;
-    --color: #{$color-action};
-    --border-color: #{$color-action};
-    --hover-overlay: #{rgba($color-action, 0.08)};
+    --color-text: hsl(var(--color-action));
+    --border-color: hsl(var(--color-action));
+    --hover-overlay: hsla(hsl(var(--color-action)), 0.08);
   }
 }
-

@@ -21,13 +21,13 @@
 
     &:not(:placeholder-shown) {
       &:invalid {
-        border-color: $color-error;
-        + label { color: $color-error }
+        border-color: hsl(var(--color-error));
+        + label { color: hsl(var(--color-error)) }
       }
 
       &:valid {
-        border-color: $color-success;
-        + label { color: $color-success }
+        border-color: hsl(var(--color-success));
+        + label { color: hsl(var(--color-success)) }
       }
     }
   }

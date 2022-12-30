@@ -13,7 +13,7 @@
     flex-wrap: wrap;
     gap: $s-6;
     background: url(../images/wave-background.svg) no-repeat bottom/100% min(10vw, 100px), // Full-width positioned at bottom with a max height of 10vw or 100px
-                linear-gradient(to top, $color-blue-midnight, $color-blue-maritime);
+                linear-gradient(to top, hsl(var(--color-blue-midnight)), hsl(var(--color-blue-maritime)));
 
     > .description {
       margin-right: auto;
@@ -22,7 +22,7 @@
       > h1 {
         line-height: 1.2;
         font-size: clamp(2rem, 3vw + 1rem, 4rem);
-        color: hsl(0deg 0% 100%);
+        color: hsl(0 0% 100%);
       }
 
       > .main {
@@ -31,7 +31,7 @@
         font-size: clamp(1rem, 2.5vw + 0.5rem, 1.5rem);
         font-weight: 600;
         max-width: 580px;
-        color: hsl(0deg 0% 100%);
+        color: hsl(0 0% 100%);
       }
 
       > .secondary {
@@ -39,7 +39,7 @@
         font-size: clamp(0.75rem, 1.5vw + 0.25rem, 1rem);
         font-weight: 400;
         max-width: 580px;
-        color: $color-secondary;
+        color: hsl(var(--color-secondary));
       }
     }
 
@@ -54,7 +54,7 @@
         width: 100vw;
         height: 100vh;
         position: fixed;
-        background: hsl(0deg 0% 0% / 75%);
+        background: hsl(0 0% 0% / 75%);
         opacity: 0;
         display: block;
         z-index: 1;
@@ -63,17 +63,17 @@
       }
 
       > .form {
-        $form-shadow: 0px 16px 56px 8px hsl(0deg 0% 0% / 10%);
-        --highlight-ping: #{0 0 16px -96px rgba($color-secondary, 1)};
-        --highlight-glow: #{0 0 16px -48px rgba($color-secondary, 1)};
+        $form-shadow: 0px 16px 56px 8px hsl(0 0% 0% / 10%);
+        --highlight-ping: 0 0 16px -96px hsla(var(--color-secondary), 1);
+        --highlight-glow: 0 0 16px -48px hsla(var(--color-secondary), 1);
 
         position: relative;
         display: flex;
         flex-direction: column;
         gap: $s-1-half;
         padding: $s-6;
-        background-color: hsl(0deg 0% 100%);
-        border-top: 4px solid $color-success;
+        background-color: hsl(0 0% 100%);
+        border-top: 4px solid hsl(var(--color-success));
         box-shadow: $form-shadow, var(--highlight-ping), var(--highlight-glow);
         scroll-margin-top: $s-8;
         z-index: 2;
@@ -95,14 +95,14 @@
             flex: 1 0 120px;
           }
         }
-      }
+      } 
 
 
 
       &.-highlight{
         &:focus-within .form {
-          --highlight-ping: #{0 0 96px 96px rgba($color-secondary, 0)};
-          --highlight-glow: #{0 0 48px 16px rgba($color-secondary, 0.5)};
+          --highlight-ping: 0 0 96px 96px hsla(var(--color-secondary), 0);
+          --highlight-glow: 0 0 48px 16px hsla(var(--color-secondary), 0.5);
           scale: 1.075;
         }
 
