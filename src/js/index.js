@@ -10,8 +10,9 @@ window.addEventListener('load', () => {
 
 ctaButton.addEventListener('click', () => {
   const form = document.querySelector('#home_form')
-  form.focus()
+  const firstInput = document.querySelector('#first_name')
   form.classList.add('-highlight')
+  firstInput.focus()
 })
 
 form.addEventListener('blur', (e) => {
