@@ -19,11 +19,13 @@
   overflow: hidden;
   user-select: none;
   cursor: pointer;
+  text-decoration: none;
   transition: all ease-in-out 200ms;
 
   &:hover,
   &:focus-visible {
     box-shadow: inset 0 0 0 10em var(--hover-overlay);
+    text-decoration: none;
   }
 
   &.-outlined {
