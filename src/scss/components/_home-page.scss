@@ -13,7 +13,7 @@
     flex-wrap: wrap;
     gap: $s-6;
     background: url(../images/wave-background.svg) no-repeat bottom/100% min(10vw, 100px), // Full-width positioned at bottom with a max height of 10vw or 100px
-                linear-gradient(to top, hsl(var(--color-blue-midnight)), hsl(var(--color-blue-maritime)));
+                linear-gradient(to top, hsl(var(--color-brand)), hsl(var(--color-brand-light)));
 
     > .description {
       margin-right: auto;
@@ -80,7 +80,6 @@
         transition: scale 500ms 750ms ease,
                     box-shadow 1s 250ms ease-in-out;
 
-
         > h2 {
           font-weight: 400;
           text-align: center;
@@ -95,9 +94,7 @@
             flex: 1 0 120px;
           }
         }
-      } 
-
-
+      }
 
       &.-highlight{
         &:focus-within .form {

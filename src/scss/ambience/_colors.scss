@@ -12,6 +12,7 @@
   --color-purple-widowmaker: 230, 100%, 80%;
   --color-purple-genie: 240, 100%, 70%;
 
+
   // Context colors
   --color-brand: var(--color-blue-midnight);
   --color-brand-light: var(--color-blue-maritime);
@@ -21,4 +22,22 @@
   --color-action: var(--color-purple-genie);
   --color-success: var(--color-green-ice);
   --color-error: var(--color-red-heart);
+}
+
+[data-theme="green"] {
+
+  --color-black-borealis: 160, 90%, 10%;
+
+  --color-green-maritime: 160, 35%, 25%;
+  --color-green-midnight: 160, 80%, 30%;
+
+  --color-green-widowmaker: 150, 80%, 35%;
+  --color-green-genie: 160, 65%, 70%;
+
+  --color-brand: var(--color-green-maritime);
+  --color-brand-light: var(--color-green-midnight);
+  --color-secondary: var(--color-green-genie);
+
+  --color-text: var(--color-black-borealis);
+  --color-action: var(--color-green-widowmaker);
 }

@@ -32,6 +32,6 @@
     --background-color: transparent;
     --color-text: hsl(var(--color-action));
     --border-color: hsl(var(--color-action));
-    --hover-overlay: hsla(hsl(var(--color-action)), 0.08);
+    --hover-overlay: hsla(var(--color-action), 0.08);
   }
 }

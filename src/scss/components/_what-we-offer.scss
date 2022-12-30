@@ -46,6 +46,10 @@
         color: hsl(var(--color-text));
         margin-top: $s-2;
       }
+
+      svg {
+        color: hsl(var(--color-secondary));
+      }
     }
   }
 
