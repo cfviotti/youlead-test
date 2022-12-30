@@ -1,5 +1,5 @@
 .main-nav {
-  $show-breakpoint: $bp-tablet;
+  $show-breakpoint: $bp-desktop;
 
   @mixin has-items-opened {
     transform: translateY(0);

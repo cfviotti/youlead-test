@@ -19,7 +19,7 @@
       margin-right: auto;
       flex: 9999 1 320px;
 
-      @media (max-width: $bp-tablet) {
+      @media (min-width: $bp-tablet) {
         flex: 9999 1 360px;
       }
 
@@ -75,7 +75,7 @@
         display: flex;
         flex-direction: column;
         gap: $s-1-half;
-        padding: $s-6;
+        padding: $s-4;
         background-color: hsl(0 0% 100%);
         border-top: 4px solid hsl(var(--color-success));
         box-shadow: $form-shadow, var(--highlight-ping), var(--highlight-glow);
@@ -84,8 +84,8 @@
         transition: scale 500ms 750ms ease,
                     box-shadow 1s 250ms ease-in-out;
 
-        @media (max-width: $bp-tablet) {
-          padding-inline: $s-4;
+        @media (min-width: $bp-tablet) {
+          padding: $s-6;
           gap: $s-2;
         }
 
@@ -103,7 +103,7 @@
           .input-text {
             flex: 1 0 120px;
 
-            @media (max-width: $bp-tablet) {
+            @media (min-width: $bp-tablet) {
               flex: 1 0 160px;
             }
           }
