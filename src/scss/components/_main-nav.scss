@@ -1,8 +1,11 @@
 .main-nav {
+  $show-breakpoint: $bp-tablet;
+
   @mixin has-items-opened {
     transform: translateY(0);
     transition: transform 200ms ease-in-out;
     box-shadow: 0px 6px 8px 0px hsl(0 0% 0% / 15%);
+    z-index: 3;
   }
 
   @include contain-width;
@@ -15,7 +18,7 @@
   gap: $s-4;
 
   .items:focus-within  {
-    @media (max-width: $bp-tablet) {
+    @media (max-width: $show-breakpoint) {
       @include has-items-opened;
     }
   }
@@ -28,7 +31,8 @@
   .items {
     display: flex;
     gap: inherit;
-    z-index: 1;
+    font-size: 1.25rem;
+    font-weight: 600;
 
     > ul {
       display: flex;
@@ -53,7 +57,7 @@
       }
     }
 
-    @media (max-width: $bp-tablet) {
+    @media (max-width: $show-breakpoint) {
       position: fixed;
       top: 0;
       left: 0;
@@ -71,11 +75,11 @@
 
   > .hamburger-menu {
     order: 1;
-    z-index: 2;
 
-    @media (max-width: $bp-tablet) {
-
+    @media (max-width: $show-breakpoint) {
       &:checked {
+        z-index: 4;
+
         &::after, &::before {
           position: fixed;
         }
@@ -86,7 +90,7 @@
       }
     }
 
-    @media (min-width: $bp-tablet) {
+    @media (min-width: $show-breakpoint) {
       display: none;
     }
   }

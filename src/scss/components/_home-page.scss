@@ -19,6 +19,10 @@
       margin-right: auto;
       flex: 9999 1 320px;
 
+      @media (max-width: $bp-tablet) {
+        flex: 9999 1 360px;
+      }
+
       > h1 {
         line-height: 1.2;
         font-size: clamp(2rem, 3vw + 1rem, 4rem);
@@ -36,7 +40,7 @@
 
       > .secondary {
         margin-top: 2.5em; // Dynamic margin to match font-size
-        font-size: clamp(0.75rem, 1.5vw + 0.25rem, 1rem);
+        font-size: clamp(0.75rem, 1.5vw + 0.25rem, 1.2rem);
         font-weight: 400;
         max-width: 580px;
         color: hsl(var(--color-secondary));
@@ -44,7 +48,7 @@
     }
 
     > .contact {
-      flex: 1 0 360px;
+      flex: 1 0 480px;
       max-width: 100%;
 
       &::after {
@@ -80,7 +84,13 @@
         transition: scale 500ms 750ms ease,
                     box-shadow 1s 250ms ease-in-out;
 
+        @media (max-width: $bp-tablet) {
+          padding-inline: $s-4;
+          gap: $s-2;
+        }
+
         > h2 {
+          font-size: 1.75rem;
           font-weight: 400;
           text-align: center;
         }
@@ -92,6 +102,10 @@
 
           .input-text {
             flex: 1 0 120px;
+
+            @media (max-width: $bp-tablet) {
+              flex: 1 0 160px;
+            }
           }
         }
       }
