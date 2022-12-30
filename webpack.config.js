@@ -6,6 +6,7 @@ const path = require('path');
 const fs = require('fs');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -69,18 +70,6 @@ module.exports = {
               ['gifsicle', { interlaced: true }],
               ['jpegtran', { progressive: true }],
               ['optipng', { optimizationLevel: 5 }],
-              // Svgo configuration here https://github.com/svg/svgo#configuration
-              [
-                'svgo',
-                {
-                  plugins: [
-                    {
-                      name: 'removeViewBox',
-                      active: false,
-                    },
-                  ],
-                },
-              ],
             ],
           },
         },
@@ -106,6 +95,14 @@ module.exports = {
           },
         },
       ],
+    }),
+    new HtmlWebpackInlineSVGPlugin({
+      inlineAll: true,
+      runPreEmit: true,
+      svgoConfig: [
+        { inlineStyles: false },
+        { minifyStyles: false },
+     ]
     }),
   ].concat(htmlPluginEntries),
   target: 'web',
