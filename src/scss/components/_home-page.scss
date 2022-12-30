@@ -12,7 +12,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: $s-6;
-    background: url(../images/wave-background.svg) no-repeat bottom/100% min(10vw, 100px), // Full-width positioned at bottom with a max height of 10vw or 100px
+    background: url(../images/wave-background.svg) no-repeat bottom/100% min(10vw, 300px), // Full-width positioned at bottom with a max height of 10vw or 300px
                 linear-gradient(to top, hsl(var(--color-brand)), hsl(var(--color-brand-light)));
 
     > .description {
