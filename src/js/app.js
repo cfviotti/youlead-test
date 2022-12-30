@@ -1,3 +1,3 @@
-import '../scss/app.scss';
+import '../scss/app.scss'
 
-// Here be dragons
+import './index.js'
